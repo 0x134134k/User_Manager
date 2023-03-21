@@ -63,6 +63,7 @@ while true; do
       if sudo grep -Eq "^#?PasswordAuthentication\s+(no|yes)$" /etc/ssh/sshd_config; then
         # SSH config has been edited, replace with "PasswordAuthentication yes"
         sudo sed -i -E 's/^#?PasswordAuthentication\s+(no|yes)$/PasswordAuthentication yes/' /etc/ssh/sshd_config
+        sudo sed -i '/^PubkeyAuthentication /c\PubkeyAuthentication yes' /etc/ssh/sshd_config
       else
         # SSH config has not been edited, add a comment
         sudo sed -i '1i# Password authentication has been disabled' /etc/ssh/sshd_config
