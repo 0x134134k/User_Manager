@@ -17,7 +17,7 @@ while true; do
   echo "5. Edit SSH config"
   echo "6. Restart SSH service"
   echo "7. Delete this script"
-  echo "8. Exit"
+  echo "0. Exit"
 
   read -p "Select an option: " option
   case $option in
@@ -80,7 +80,7 @@ while true; do
       rm $0
       echo "Script deleted."
       ;;
-    8)
+    0)
       # Exit script
       exit;;
     *)
