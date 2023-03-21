@@ -11,7 +11,7 @@ echo "   User Manager Menu!"
 
 while true; do
   # Display menu and prompt user for selection
-  select option in "Change root password" "Switch to root" "Add new user" "Delete user" "Edit SSH config" "Restart SSH service" "Delete this script" "Exit"; do
+  select option in "Change root password" \n "Switch to root" "Add new user" \n "Delete user" "Edit SSH config" "Restart SSH service" "Delete this script" "Exit"; do
     case $option in
       "Change root password")
         # Prompt user for new root password
