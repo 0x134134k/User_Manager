@@ -8,5 +8,6 @@ Add root and regular user to Ubuntu Server
  5) Edit SSH config    
  6) Restart SSH service
  7) Delete this script
+ 
  0) Exit
 
